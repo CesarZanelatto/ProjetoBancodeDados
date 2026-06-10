@@ -29,9 +29,8 @@ CREATE VIEW vw_notebooks_por_setor AS
 SELECT
 	s.nome_setor,
 	COUNT(nb.ID_NOTEBOOK) AS TOTAL_NOTEBOOKS,
-	SUM(nb.STATUS = 'Em uso') AS EM_USO,
-	SUM(nb.STATUS = 'Disponivel') AS DISPONIVEIS,
-	SUM(nb.STATUS = 'Manutencao') AS MANUTENCAO
+	SUM(nb.STATUS = 'disponivel') AS DISPONIVEIS,
+	SUM(nb.STATUS = 'indisponivel') AS INDISPONIVEL
 FROM setor s
 LEFT JOIN FUNCIONARIO f ON s.id_setor = f.ID_SETOR
 LEFT JOIN NOTEBOOK nb ON f.ID_FUNCIONARIO = nb.ID_FUNCIONARIO
