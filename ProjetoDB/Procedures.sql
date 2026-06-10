@@ -79,3 +79,20 @@ BEGIN
 END//
  
 DELIMITER ;
+
+--Consultar notebook por patrimonio
+ 
+DELIMITER //
+ 
+CREATE PROCEDURE buscarNotebook(
+    IN patrimonio_p VARCHAR(50)
+)
+BEGIN
+ 
+    SELECT *
+    FROM notebook
+    WHERE patrimonio = patrimonio_p;
+ 
+END//
+ 
+DELIMITER ;
