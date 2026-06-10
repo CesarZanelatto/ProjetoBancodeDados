@@ -96,3 +96,19 @@ BEGIN
 END//
  
 DELIMITER ;
+
+--Contar notebooks
+DELIMITER //
+ 
+CREATE PROCEDURE quantidadeNotebooks(
+    OUT quantidade INT
+)
+BEGIN
+ 
+    SELECT COUNT(*)
+    INTO quantidade
+    FROM notebook;
+ 
+END//
+ 
+DELIMITER ;
