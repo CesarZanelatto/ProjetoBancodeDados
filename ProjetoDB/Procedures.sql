@@ -155,3 +155,36 @@ END//
  
 DELIMITER ;
  
+ --Categoria do notebook
+ 
+DELIMITER //
+ 
+CREATE PROCEDURE categoriaNotebook(
+    IN id_notebook_p INT,
+    OUT categoria VARCHAR(30)
+)
+BEGIN
+ 
+    DECLARE valor_status VARCHAR(20);
+ 
+    SELECT status
+    INTO valor_status
+    FROM notebook
+    WHERE id_notebook = id_notebook_p;
+ 
+    CASE valor_status
+ 
+        WHEN 'Disponivel' THEN
+            SET categoria = 'Pronto para uso';
+ 
+        WHEN 'Em Uso' THEN
+            SET categoria = 'Equipamento ativo';
+ 
+        WHEN 'Manutencao' THEN
+            SET categoria = 'Equipamento indisponivel';
+ 
+    END CASE;
+ 
+END//
+ 
+DELIMITER ;
