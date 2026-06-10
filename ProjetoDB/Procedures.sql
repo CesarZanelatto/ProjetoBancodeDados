@@ -112,3 +112,46 @@ BEGIN
 END//
  
 DELIMITER ;
+
+--Quantidade de funcionario
+DELIMITER //
+ 
+CREATE PROCEDURE quantidadeFuncionarios(
+
+    OUT quantidade INT
+
+)
+
+BEGIN
+ 
+    SELECT COUNT(*)
+
+    INTO quantidade
+
+    FROM funcionario;
+ 
+END//
+ 
+DELIMITER ;
+ 
+--Buscar Funcionario 
+DELIMITER //
+ 
+CREATE PROCEDURE buscarFuncionario(
+
+    IN id_funcionario_p INT
+
+)
+
+BEGIN
+ 
+    SELECT *
+
+    FROM funcionario
+
+    WHERE id_funcionario = id_funcionario_p;
+ 
+END//
+ 
+DELIMITER ;
+ 
