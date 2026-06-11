@@ -174,14 +174,14 @@ BEGIN
  
     CASE valor_status
  
-        WHEN 'Disponivel' THEN
-            SET categoria = 'Pronto para uso';
- 
-        WHEN 'Em Uso' THEN
-            SET categoria = 'Equipamento ativo';
- 
-        WHEN 'Manutencao' THEN
-            SET categoria = 'Equipamento indisponivel';
+        CASE valor_status
+    WHEN 'disponivel' THEN
+        SET categoria = 'Pronto para uso';
+
+    WHEN 'indisponivel' THEN
+        SET categoria = 'Equipamento indisponivel';
+
+END CASE;
  
     END CASE;
  
