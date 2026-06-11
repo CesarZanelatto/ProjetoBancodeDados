@@ -1,0 +1,5 @@
+-- Criar o Backup
+"C:\xampp\mysql\bin\mysqldump.exe" -u root ProjetoDB > backup.sql
+
+-- Restaurar Backup
+"C:\xampp\mysql\bin\mysql.exe" -u root ProjetoDB < backup.sql
