@@ -14,9 +14,3 @@ CREATE user 'cesar'@'%'IDENTIFIED BY '1234'; -- nome e senha
 GRANT ALL PRIVILEGES ON ProjetoDB.* TO 'cesar'@'%'; --dar todos os privilegios pro cesar
  
 SELECT user, host FROM mysql.user; -- so pra ver o usuário criado
-
--- Criar o Backup
-"C:\xampp\mysql\bin\mysqldump.exe" -u root ProjetoDB > backup.sql
-
--- Restaurar Backup
-"C:\xampp\mysql\bin\mysql.exe" -u root ProjetoDB < backup.sql
