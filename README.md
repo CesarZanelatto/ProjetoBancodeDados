@@ -197,8 +197,8 @@ Diagramas
 
 Diagrama de Caso de Uso
 
-Adicionar imagem:
-<img width="434" height="578" alt="image" src="https://github.com/user-attachments/assets/9bc4e411-2c11-4b28-bef9-2a43e277fb23" />
+<img width="413" height="548" alt="image" src="https://github.com/user-attachments/assets/602b5420-e4fa-42f0-a579-f312f608d027" />
+
 
 
 Descrição:
@@ -211,7 +211,6 @@ Consultar relatórios
 Controlar atribuições
 Diagrama UML / DER
 
-Adicionar imagem:
 
 <img width="571" height="467" alt="image" src="https://github.com/user-attachments/assets/88a32d73-d5b5-42f7-8278-78af26753024" />
 
