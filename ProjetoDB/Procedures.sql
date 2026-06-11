@@ -173,16 +173,11 @@ BEGIN
     WHERE id_notebook = id_notebook_p;
  
     CASE valor_status
- 
-        CASE valor_status
-    WHEN 'disponivel' THEN
-        SET categoria = 'Pronto para uso';
+        WHEN 'disponivel' THEN
+            SET categoria = 'Pronto para uso';
 
-    WHEN 'indisponivel' THEN
-        SET categoria = 'Equipamento indisponivel';
-
-END CASE;
- 
+        WHEN 'indisponivel' THEN
+            SET categoria = 'Equipamento indisponivel';
     END CASE;
  
 END//
