@@ -1,4 +1,4 @@
-# ProjetoBancodeDados
+# Projeto Banco de Dados
 Sistema de Controle de Notebooks Corporativos
 Integrantes
 César de Oliveira Zanelatto
