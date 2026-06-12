@@ -83,18 +83,18 @@ DELIMITER ;
 --Consultar notebook por patrimonio
  
 DELIMITER //
- 
+
 CREATE PROCEDURE buscarNotebook(
     IN patrimonio_p VARCHAR(50)
 )
 BEGIN
- 
+
     SELECT *
     FROM notebook
-    WHERE patrimonio = patrimonio_p;
- 
+    WHERE CAST(AES_DECRYPT(patrimonio,'1234') AS CHAR) = patrimonio_p;
+
 END//
- 
+
 DELIMITER ;
 
 --Contar notebooks
